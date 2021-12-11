@@ -23,9 +23,4 @@ public final class MainActivity extends AppCompatActivity implements View.OnClic
         super.finish();
         super.startActivity(ticTacToe);
     }
-
-    @Override
-    public void onPointerCaptureChanged(final boolean hasCapture) {
-        super.onPointerCaptureChanged(hasCapture);
-    }
 }
