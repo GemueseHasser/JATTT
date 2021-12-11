@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">JATTT</string>
+    <string name="heading">Tic-Tac-Toe</string>
+    <string name="play">Spiel starten</string>
+    <string name="ttt_image_description">Tic-Tac-Toe Icon</string>
+</resources>
