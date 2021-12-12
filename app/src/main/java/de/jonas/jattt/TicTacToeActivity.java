@@ -2,13 +2,13 @@ package de.jonas.jattt;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public final class TicTacToeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final Button[] buttons = new Button[9];
+    private final ImageView[] views = new ImageView[9];
 
 
     @Override
@@ -16,18 +16,18 @@ public final class TicTacToeActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_tic_tac_toe);
 
-        this.buttons[0] = super.findViewById(R.id.button1);
-        this.buttons[1] = super.findViewById(R.id.button2);
-        this.buttons[2] = super.findViewById(R.id.button3);
-        this.buttons[3] = super.findViewById(R.id.button4);
-        this.buttons[4] = super.findViewById(R.id.button5);
-        this.buttons[5] = super.findViewById(R.id.button6);
-        this.buttons[6] = super.findViewById(R.id.button7);
-        this.buttons[7] = super.findViewById(R.id.button8);
-        this.buttons[8] = super.findViewById(R.id.button9);
+        this.views[0] = super.findViewById(R.id.field_1);
+        this.views[1] = super.findViewById(R.id.field_2);
+        this.views[2] = super.findViewById(R.id.field_3);
+        this.views[3] = super.findViewById(R.id.field_4);
+        this.views[4] = super.findViewById(R.id.field_5);
+        this.views[5] = super.findViewById(R.id.field_6);
+        this.views[6] = super.findViewById(R.id.field_7);
+        this.views[7] = super.findViewById(R.id.field_8);
+        this.views[8] = super.findViewById(R.id.field_9);
 
-        for (@NonNull final Button button : this.buttons) {
-            button.setOnClickListener(this);
+        for (@NonNull final ImageView view : this.views) {
+            view.setOnClickListener(this);
         }
     }
 
