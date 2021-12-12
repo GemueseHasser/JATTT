@@ -1,19 +1,21 @@
 package de.jonas.jattt.activity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import de.jonas.jattt.R;
+import de.jonas.jattt.listener.ClickListener;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public final class TicTacToeActivity extends AppCompatActivity implements View.OnClickListener {
+public final class TicTacToeActivity extends AppCompatActivity {
 
-    private final ImageView[] views = new ImageView[9];
+    @NotNull
+    private final ImageView @NotNull [] views = new ImageView[9];
 
 
     @Override
-    protected void onCreate(final Bundle savedInstanceState) {
+    protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_tic_tac_toe);
 
@@ -27,13 +29,8 @@ public final class TicTacToeActivity extends AppCompatActivity implements View.O
         this.views[7] = super.findViewById(R.id.field_8);
         this.views[8] = super.findViewById(R.id.field_9);
 
-        for (@NonNull final ImageView view : this.views) {
-            view.setOnClickListener(this);
+        for (int i = 0; i < this.views.length; i++) {
+            views[i].setOnClickListener(new ClickListener(i));
         }
-    }
-
-    @Override
-    public void onClick(final View view) {
-        view.setBackgroundResource(R.drawable.img_x);
     }
 }
