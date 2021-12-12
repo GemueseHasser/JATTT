@@ -1,10 +1,11 @@
-package de.jonas.jattt;
+package de.jonas.jattt.activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import de.jonas.jattt.R;
 
 public final class TicTacToeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -33,5 +34,6 @@ public final class TicTacToeActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(final View view) {
+        view.setBackgroundResource(R.drawable.img_x);
     }
 }

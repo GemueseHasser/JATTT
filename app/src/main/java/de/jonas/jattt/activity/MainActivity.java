@@ -1,10 +1,11 @@
-package de.jonas.jattt;
+package de.jonas.jattt.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import de.jonas.jattt.R;
 
 public final class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
